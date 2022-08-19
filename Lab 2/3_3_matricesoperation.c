@@ -66,19 +66,19 @@ int main(){
     }
     printf("Enter the number of rows and columns of second matrix: ");
     scanf("%d %d",&r2,&c2);
-    int arr2[r2][c2];
-    printf("Enter the elements of second matrix: ");
-    for(int i=0;i<r2;i++){
-        for(int j=0;j<c2;j++){
-            scanf("%d",&arr2[i][j]);
-        }
-    }
+    // int arr2[r2][c2];
+    // printf("Enter the elements of second matrix: ");
+    // for(int i=0;i<r2;i++){
+    //     for(int j=0;j<c2;j++){
+    //         scanf("%d",&arr2[i][j]);
+    //     }
+    // }
 
     transpose(r1,c1,arr1);
-    transpose(r2,c2,arr2);
-    add(r1,c1,arr1,arr2);
-    sub(r1,c1,arr1,arr2);
-    multiply(r1,c1,arr1,arr2);
+    // transpose(r2,c2,arr2);
+    // add(r1,c1,arr1,arr2);
+    // sub(r1,c1,arr1,arr2);
+    // multiply(r1,c1,arr1,arr2);
 
     return 0;
 
