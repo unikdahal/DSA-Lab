@@ -19,7 +19,7 @@ int main(){
         }
     }
 
-    int arr1[count][count]={0};
+    int arr1[count][count];
     int r1=0;
     printf("The matrix is : \n");
     for(int i=0;i<r;i++){
@@ -45,7 +45,7 @@ int main(){
         printf("\n");
     }
 
-    int arr2[count][count]={0};
+    int arr2[count][count];
     printf("\n The transpose is \n");
     for(int i=0;i<3;i++){
         for(int j=0;j<count;j++){
@@ -57,9 +57,18 @@ int main(){
 
     for(int i=0;i<count;i++){
         for(int j=0;j<count;j++){
+            printf("%d",arr2[i][j]);
+        }
+        printf("\n");
+    }
+    printf("The sum of triplets is\n");
+    for(int i=0;i<count;i++){
+        for(int j=0;j<count;j++){
             printf("%d",arr1[i][j]+arr2[i][j]);
         }
+        printf("\n");
     }
+
 
 
     return 0;
