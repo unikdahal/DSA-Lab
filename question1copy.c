@@ -124,12 +124,25 @@ void traverse(){
 
 void whitelist(char *str){
     struct node *temp=head;
-    int i=0;
+    int i=0,j;
+    int arr[100];
     while (temp->next!=NULL)
     {
         if (str[0]=='.')
         {
-            printf("%f ",temp->cgpa);
+            arr[i]=temp->cgpa;
+            //check if the next element is already printed
+            for(j=0;j<100;i++){
+                if (arr[j]==temp->cgpa)
+                {
+                    break;
+                }
+
+            }
+            if(j==100){
+                printf("%f ",temp->cgpa);
+            }
+            i++;
         }else if(str[0]>='0' && str[0]<='2'){
             printf("%d ",temp->roll);
         }
