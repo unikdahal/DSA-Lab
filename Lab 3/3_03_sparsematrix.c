@@ -6,7 +6,9 @@ int main(){
     printf("Enter the number of rows and columns of the matrix");
     scanf("%d %d",&r,&c);
     int arr[r][c];
-
+    int th;
+    printf("Enter the threshold");
+    scanf("%d",&th);
     for(int i=0;i<r;i++){
         for(int j=0;j<c;j++){
             scanf("%d",&arr[i][j]);
@@ -29,7 +31,7 @@ int main(){
 
     printf("%f",percentage);
 
-    if(percentage<60 || percentage>75){
+    if(percentage<th){
         printf("Not sparse");
     }else{
         printf("Sparse");
