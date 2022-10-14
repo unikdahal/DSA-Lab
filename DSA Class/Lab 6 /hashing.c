@@ -27,7 +27,36 @@ int main(){
             int j=rem+1;
             while(hash[j]!=0){
                 j++;
+                if(j==n){
+                    j=0;
+                }
+                if(j==rem){
+                    printf("No more space in hash table");
+                    exit(0);
+                }
             }
             hash[j]=arr[i];
         }
     }
+
+    int rem=key%n;
+    if(hash[rem]==key){
+        printf("Present");
+    }else{
+        int j=rem+1;
+        while(hash[j]!=key){
+            j++;
+            if(j==n){
+                j=0;
+            }
+            if(j==rem){
+                printf("Not present");
+                exit(0);
+            }
+        }
+        printf("Present");
+    }
+
+    return 0;
+
+}
